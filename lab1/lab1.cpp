@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
 	// seed the random number generator
 	srand(time(nullptr));
 
-	int computerRandomNumber = rand() % 100 + 1;
+	int computerRandomNumber = rand() % 10000 + 1;
 
 	//game start message
 	std::cout << "Guess a number between 1 and 100";
