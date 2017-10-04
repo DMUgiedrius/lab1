@@ -14,18 +14,19 @@ int main(void) {
 		int number = rand() % 99 + 2; // System number is stored in here.
 		int guess; // User guess is stored in here.
 		int tries = 0; // Number of tries is stored here.
+		int totalTries = 10;
 		char answer; // User answer to question is stored here.
 
 					 //std::cout << number << "\n"; // Was used for debug...
 
 		while (true) { // Get user number loop.
 					   // Get number.
-			std::cout << "Enter a number between 1 and 100 (" << 20 - tries << " tries left): ";
+			std::cout << "Enter a number between 1 and 100 (" << totalTries - tries << " tries left): ";
 			std::cin >> guess;
 			std::cin.ignore();
 
 			// Check is tries are taken up.
-			if (tries >= 20) {
+			if (tries >= totalTries) {
 				break;
 			}
 
@@ -45,7 +46,7 @@ int main(void) {
 		}
 
 		// Check for tries.
-		if (tries >= 20) {
+		if (tries >= totalTries) {
 			std::cout << "You ran out of tries!\n\n";
 		}
 		else {
